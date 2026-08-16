@@ -1,0 +1,14 @@
+#!/bin/bash
+# VPN 配置（你只需要改这里）
+VPN_URL="vpn.tongji.cn"
+VPN_USER="你的学校帐号"
+VPN_GROUP=""  # 没有分组就留空：VPN_GROUP=""
+
+# 自动后台连接 + 保存密码
+sudo openconnect \
+--protocol array \
+-b \
+--pid-file=/tmp/vpn.tongji.pid \
+-u "$VPN_USER" \
+"$VPN_URL" 
+
