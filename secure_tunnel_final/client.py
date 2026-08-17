@@ -563,7 +563,7 @@ def main():
         sock.close()
 
         print("[TUN] tjvpn0 closed")
-        print("[INFO] Stage 5 client stopped")
+        print("[INFO] Secure tunnel client stopped")
 
 
 if __name__ == "__main__":
