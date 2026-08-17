@@ -2,7 +2,7 @@
 # VPN 配置（你只需要改这里）
 VPN_URL="https://10.80.42.150:10012"
 VPN_USER="kcsj0018"
-VPN_PASS="Yry123456."
+VPN_PASS="5hXDwJmxWqVv"
 VPN_GROUP=""  # 没有分组就留空：VPN_GROUP=""
 CERT="pin-sha256:xS55JRIQehRocNogogcZQg43VVQoeh+y95bj+Z10Cs4="
 
