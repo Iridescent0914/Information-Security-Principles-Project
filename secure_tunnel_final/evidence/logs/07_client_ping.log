@@ -1,0 +1,65 @@
+[HANDSHAKE] Sent ClientHello
+Server = 172.29.255.229:2026
+Protocol version = 0x1
+Client Random = baea89e67b59976ec7ea7b800f1c467c
+Cipher Suites = ['0x1']
+
+[HANDSHAKE] Received ServerHello
+Server address = ('172.29.255.229', 2026)
+Protocol version = 0x1
+Server Random = 08969a59d07b3d219417d92a6ef0f169
+Selected Suite = 0x1
+Certificate length = 587
+[CERT] Server certificate verified
+
+[HANDSHAKE] Sent ClientKeyExchange
+Client ECDH public key length = 65
+
+[HANDSHAKE] Received ServerKeyExchange
+Server ECDH public key length = 65
+
+[CRYPTO] ECDH complete
+Pre-Master length = 32
+Pre-Master SHA256 = 92dce429c18aee07ccb4eaa808fa1e621673da96fcc5e961729b81005fc0987c
+
+[TRANSCRIPT] SHA256 = 09d1d03298b3868962c6c134dd1bdeb5a6426795fa7a358d73965f98b3018c72
+
+[CRYPTO] HKDF complete
+Session Key length = 16
+Session Key SHA256 = 22fbee50a7bd0605c82827a36512f7d0934929ff55ac4b892facd358f26a54ab
+
+[HANDSHAKE] Sent ClientFinished
+
+[HANDSHAKE] Received ServerFinished
+[FINISHED] Server Finished verified
+
+[STATE] ESTABLISHED
+[INFO] Full handshake completed successfully
+
+[TUN] Created tjvpn0
+[TUN] Configure in another terminal:
+      sudo ip addr add 10.8.0.2/24 dev tjvpn0
+      sudo ip link set tjvpn0 up
+      sudo ip link set tjvpn0 mtu 1300
+
+[TUNNEL] Client tunnel loop started
+[TUNNEL] Waiting for IPv4 packets
+[DROP] Non-IPv4 packet from TUN version=6 len=48
+[DROP] Non-IPv4 packet from TUN version=6 len=48
+[DROP] Non-IPv4 packet from TUN version=6 len=48
+[DROP] Non-IPv4 packet from TUN version=6 len=48
+
+[DATA DEBUG]
+destination = 202.120.2.101
+sequence = 1
+header = 544a02000000010070
+iv = 8d97adbe78eb18d2a085f37f
+plaintext = 45000054d7ba400040018c070a080002ca780265080099b2aa760001261b836a000000003d7d0e0000000000101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f3031323334353637
+ciphertext = 002ae7ea6efe479a720c0e47166c71705eb2774f2616af7b7986b7e5d8490fd8215fa8390600ce9a363fc59f6998b94178c87cd9eb9c088001230b997f39521d778ce05472bacc92f7193c6f4b567d0c5e8102ac
+auth_tag = a0825602df9cbf2e2f6255b8b25c3270
+payload = 8d97adbe78eb18d2a085f37f002ae7ea6efe479a720c0e47166c71705eb2774f2616af7b7986b7e5d8490fd8215fa8390600ce9a363fc59f6998b94178c87cd9eb9c088001230b997f39521d778ce05472bacc92f7193c6f4b567d0c5e8102aca0825602df9cbf2e2f6255b8b25c3270
+full_packet = 544a020000000100708d97adbe78eb18d2a085f37f002ae7ea6efe479a720c0e47166c71705eb2774f2616af7b7986b7e5d8490fd8215fa8390600ce9a363fc59f6998b94178c87cd9eb9c088001230b997f39521d778ce05472bacc92f7193c6f4b567d0c5e8102aca0825602df9cbf2e2f6255b8b25c3270
+[TUN->UDP] seq=1 ipv4_len=84 udp_payload_len=121
+[UDP->TUN] seq=1 ipv4_len=84
+[DROP] Non-IPv4 packet from TUN version=6 len=48
+[DROP] Non-IPv4 packet from TUN version=6 len=48

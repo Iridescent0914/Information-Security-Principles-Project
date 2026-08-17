@@ -1,0 +1,16 @@
+===== ENS33 =====
+ens33            UP             192.168.142.132/24 
+
+===== IP FORWARD =====
+net.ipv4.ip_forward = 1
+
+===== NAT =====
+Chain POSTROUTING (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+   17  1158 MASQUERADE  all  --  *      ens33   10.8.0.0/24          0.0.0.0/0           
+
+===== FORWARD =====
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+51482 2062K ACCEPT     all  --  tjvpn0 ens33   0.0.0.0/0            0.0.0.0/0           
+43102   77M ACCEPT     all  --  ens33  tjvpn0  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED

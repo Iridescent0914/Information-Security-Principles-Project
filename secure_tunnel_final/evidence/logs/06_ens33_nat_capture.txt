@@ -1,0 +1,4 @@
+10:01:20.543270 IP 192.168.142.132 > 1.1.1.1: ICMP echo request, id 7177, seq 1, length 64
+10:01:20.608178 IP 1.1.1.1 > 192.168.142.132: ICMP echo reply, id 7177, seq 1, length 64
+10:01:21.544335 IP 192.168.142.132 > 1.1.1.1: ICMP echo request, id 7177, seq 2, length 64
+10:01:21.608035 IP 1.1.1.1 > 192.168.142.132: ICMP echo reply, id 7177, seq 2, length 64

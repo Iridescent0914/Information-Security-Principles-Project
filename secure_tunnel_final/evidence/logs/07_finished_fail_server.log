@@ -1,0 +1,37 @@
+[INFO] Server listening on UDP 2026
+
+[HANDSHAKE] Received ClientHello
+Client address = ('172.30.0.2', 43126)
+Protocol version = 0x1
+Client Random = a82670fc0cfad9ce1a546b00aa543a3d
+Cipher Suites = ['0x1']
+
+[HANDSHAKE] Sent ServerHello
+Server Random = 54bdb67502aed620ecc3c4bdcc9091a5
+Selected Suite = 0x1
+Certificate length = 587
+
+[HANDSHAKE] Received ClientKeyExchange
+Client ECDH public key length = 65
+
+[HANDSHAKE] Sent ServerKeyExchange
+Server ECDH public key length = 65
+
+[CRYPTO] ECDH complete
+Pre-Master length = 32
+Pre-Master SHA256 = 28efe4cc040854e5d67a6a74c02678ca95050437e9c531cf24f47ef5ba50707b
+
+[TRANSCRIPT] SHA256 = 8840564ad04bc304d8d9d97f5a0904fb5992950687b88092d67cafed10742506
+
+[CRYPTO] HKDF complete
+Session Key length = 16
+Session Key SHA256 = 8e8a31d309e0ffb5a08bd1858ad317153fa2b3a00310f4ecf12dab739b8523e6
+
+[HANDSHAKE] Received ClientFinished
+[FINISHED] Client Finished verification FAILED
+Traceback (most recent call last):
+  File "/home/yry/secure_tunnel/server_stage4_final.py", line 551, in <module>
+    main()
+  File "/home/yry/secure_tunnel/server_stage4_final.py", line 260, in main
+    raise ValueError(
+ValueError: Client Finished verification failed

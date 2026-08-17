@@ -1,0 +1,59 @@
+[INFO] Server listening on UDP 2026
+
+[HANDSHAKE] Received ClientHello
+Client address = ('172.30.0.2', 59265)
+Protocol version = 0x1
+Client Random = baea89e67b59976ec7ea7b800f1c467c
+Cipher Suites = ['0x1']
+
+[HANDSHAKE] Sent ServerHello
+Server Random = 08969a59d07b3d219417d92a6ef0f169
+Selected Suite = 0x1
+Certificate length = 587
+
+[HANDSHAKE] Received ClientKeyExchange
+Client ECDH public key length = 65
+
+[HANDSHAKE] Sent ServerKeyExchange
+Server ECDH public key length = 65
+
+[CRYPTO] ECDH complete
+Pre-Master length = 32
+Pre-Master SHA256 = 92dce429c18aee07ccb4eaa808fa1e621673da96fcc5e961729b81005fc0987c
+
+[TRANSCRIPT] SHA256 = 09d1d03298b3868962c6c134dd1bdeb5a6426795fa7a358d73965f98b3018c72
+
+[CRYPTO] HKDF complete
+Session Key length = 16
+Session Key SHA256 = 22fbee50a7bd0605c82827a36512f7d0934929ff55ac4b892facd358f26a54ab
+
+[HANDSHAKE] Received ClientFinished
+[FINISHED] Client Finished verified
+
+[HANDSHAKE] Sent ServerFinished
+[FINISHED] Server Finished generated
+
+[STATE] ESTABLISHED
+[INFO] Full handshake completed successfully
+
+[TUN] Created tjvpn0
+[TUN] Configure in another terminal:
+      sudo ip addr add 10.8.0.1/24 dev tjvpn0
+      sudo ip link set tjvpn0 up
+      sudo ip link set tjvpn0 mtu 1300
+
+[TUNNEL] Server tunnel loop started
+[TUNNEL] Waiting for IPv4 packets
+[DROP] Non-IPv4 packet from TUN version=6 len=48
+[DROP] Non-IPv4 packet from TUN version=6 len=48
+[DROP] Non-IPv4 packet from TUN version=6 len=48
+[DROP] Non-IPv4 packet from TUN version=6 len=48
+[DROP] Non-IPv4 packet from TUN version=6 len=48
+[UDP->TUN] seq=1 ipv4_len=84
+[TUN->UDP] seq=1 ipv4_len=84 udp_payload_len=121
+[DROP] Non-IPv4 packet from TUN version=6 len=48
+[CLOSE] Client CLOSE received
+[CLOSE] Server CLOSE sent
+[STATE] CLOSED
+[TUN] tjvpn0 closed
+[INFO] Stage 5 server stopped

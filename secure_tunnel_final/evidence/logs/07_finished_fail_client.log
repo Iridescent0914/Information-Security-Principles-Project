@@ -1,0 +1,43 @@
+[HANDSHAKE] Sent ClientHello
+Server = 172.29.255.229:2026
+Protocol version = 0x1
+Client Random = a82670fc0cfad9ce1a546b00aa543a3d
+Cipher Suites = ['0x1']
+
+[HANDSHAKE] Received ServerHello
+Server address = ('172.29.255.229', 2026)
+Protocol version = 0x1
+Server Random = 54bdb67502aed620ecc3c4bdcc9091a5
+Selected Suite = 0x1
+Certificate length = 587
+[CERT] Server certificate verified
+
+[HANDSHAKE] Sent ClientKeyExchange
+Client ECDH public key length = 65
+
+[HANDSHAKE] Received ServerKeyExchange
+Server ECDH public key length = 65
+
+[CRYPTO] ECDH complete
+Pre-Master length = 32
+Pre-Master SHA256 = 28efe4cc040854e5d67a6a74c02678ca95050437e9c531cf24f47ef5ba50707b
+
+[TRANSCRIPT] SHA256 = 8840564ad04bc304d8d9d97f5a0904fb5992950687b88092d67cafed10742506
+
+[CRYPTO] HKDF complete
+Session Key length = 16
+Session Key SHA256 = 8e8a31d309e0ffb5a08bd1858ad317153fa2b3a00310f4ecf12dab739b8523e6
+
+[TEST] Sending intentionally invalid ClientFinished
+[TEST] Correct VerifyData = 98279a8834935e6c74bf766550c9af5bc32c7242328b311cf06ec3ea82cfba17
+[TEST] Tampered VerifyData = 99279a8834935e6c74bf766550c9af5bc32c7242328b311cf06ec3ea82cfba17
+
+[HANDSHAKE] Sent ClientFinished
+Traceback (most recent call last):
+  File "/home/kali/secure_tunnel/client_finished_fail.py", line 624, in <module>
+    main()
+  File "/home/kali/secure_tunnel/client_finished_fail.py", line 339, in main
+    server_finished_payload, addr = recv_handshake(sock)
+  File "/home/kali/secure_tunnel/client_finished_fail.py", line 74, in recv_handshake
+    data, addr = sock.recvfrom(65535)
+socket.timeout: timed out

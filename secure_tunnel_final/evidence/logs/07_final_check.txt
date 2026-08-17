@@ -1,0 +1,12 @@
+===== STAGE 7 FINAL CHECK =====
+
+normal handshake packets = 6
+finished-fail packets = 5
+
+[PASS] program full_packet == pcap UDP payload
+
+[PASS] Replay packet rejected
+[PASS] Modified Ciphertext rejected
+[PASS] Modified Auth Tag rejected
+
+[PASS] invalid ClientFinished rejected; session not established

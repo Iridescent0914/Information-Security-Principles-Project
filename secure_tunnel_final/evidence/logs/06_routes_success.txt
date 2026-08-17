@@ -1,0 +1,25 @@
+===== ROUTE TABLE =====
+default dev tjvpn0 scope link 
+10.8.0.0/24 dev tjvpn0 proto kernel scope link src 10.8.0.2 
+127.0.0.1 via 172.30.0.1 dev eth0 
+172.29.255.229 via 172.30.0.1 dev eth0 
+172.29.255.230 via 172.30.0.1 dev eth0 
+172.29.255.231 via 172.30.0.1 dev eth0 
+172.29.255.237 via 172.30.0.1 dev eth0 
+172.29.255.246 via 172.30.0.1 dev eth0 
+172.29.255.249 via 172.30.0.1 dev eth0 
+172.30.0.0/24 dev eth0 proto kernel scope link src 172.30.0.2 
+172.30.0.3 dev eth0 scope link 
+202.120.2.101 dev tjvpn0 scope link 
+
+===== SERVER OUTER ROUTE =====
+172.29.255.229 via 172.30.0.1 dev eth0 src 172.30.0.2 uid 1000 
+    cache 
+
+===== PUBLIC ROUTE =====
+1.1.1.1 dev tjvpn0 src 10.8.0.2 uid 1000 
+    cache 
+
+===== DNS ROUTE =====
+223.5.5.5 dev tjvpn0 src 10.8.0.2 uid 1000 
+    cache 

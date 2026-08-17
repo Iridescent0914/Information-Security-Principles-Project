@@ -1,0 +1,77 @@
+[INFO] Server listening on UDP 2026
+
+[HANDSHAKE] Received ClientHello
+Client address = ('172.30.0.2', 40674)
+Protocol version = 0x1
+Client Random = 3fa8003d98402875ac9b0cda2193c159
+Cipher Suites = ['0x1']
+
+[HANDSHAKE] Sent ServerHello
+Server Random = fa28f07bfd60f33940574f037da5ceeb
+Selected Suite = 0x1
+Certificate length = 587
+
+[HANDSHAKE] Received ClientKeyExchange
+Client ECDH public key length = 65
+
+[HANDSHAKE] Sent ServerKeyExchange
+Server ECDH public key length = 65
+
+[CRYPTO] ECDH complete
+Pre-Master length = 32
+Pre-Master SHA256 = 8fe14da74c93c901e5ccd5b1156f5141b1cf8e6460caa27263d2f5ad1bea9f53
+
+[TRANSCRIPT] SHA256 = b541f709ac54c67991a1d5be91bd3eb6256fd0681045ed0e1488c9fb665f4996
+
+[CRYPTO] HKDF complete
+Session Key length = 16
+Session Key SHA256 = 685f54db27114a9bb57aaa9c83ba8d34caed0d2ffc5461c2702ec191a1620c22
+
+[HANDSHAKE] Received ClientFinished
+[FINISHED] Client Finished verified
+
+[HANDSHAKE] Sent ServerFinished
+[FINISHED] Server Finished generated
+
+[STATE] ESTABLISHED
+[INFO] Full handshake completed successfully
+
+[DATA] Waiting for encrypted DATA packet
+
+[DATA] Decrypt success
+Sequence Number = 1
+IV = 9c77a9fb74c9e3cc7e67c17e
+Ciphertext = 44dee95fe9287ae6433ca70a40a69c11f32216
+Auth Tag = b0979e1c8e15ecc919e07a8c822a8942
+Plaintext = b'hello secure tunnel'
+
+[DATA] Encrypted response sent
+Sequence Number = 1
+IV = 7e8428c6273b3f176caae4df
+Plaintext = b'secure tunnel response'
+Ciphertext = a0241e7b654fc87d5265b97fd25f247938eefdb3baed
+Auth Tag = a1f943309387ae97de0a2a0a65f5668d
+Full Packet = 544a020000000100327e8428c6273b3f176caae4dfa0241e7b654fc87d5265b97fd25f247938eefdb3baeda1f943309387ae97de0a2a0a65f5668d
+
+[INFO] Stage 4 basic DATA test complete
+
+[TEST] Waiting for replayed DATA packet
+[PASS] Replay packet rejected
+[REPLAY] replayed or old sequence number: 1
+
+[TEST] Waiting for modified Ciphertext packet
+[PASS] Modified Ciphertext rejected
+[AES-GCM] AES-GCM authentication failed
+
+[TEST] Waiting for modified Auth Tag packet
+[PASS] Modified Auth Tag rejected
+[AES-GCM] AES-GCM authentication failed
+
+[INFO] Stage 4B security tests complete
+
+[CLOSE] Waiting for client CLOSE
+[CLOSE] Client CLOSE received
+[CLOSE] Server CLOSE sent
+[STATE] CLOSED
+
+[INFO] Stage 4 complete
